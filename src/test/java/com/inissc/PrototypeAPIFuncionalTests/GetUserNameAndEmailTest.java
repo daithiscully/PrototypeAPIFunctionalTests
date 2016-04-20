@@ -54,15 +54,10 @@ public class GetUserNameAndEmailTest {
 
             String id = (String) jsonObject.get("id");
             String name = (String) jsonObject.get("name");
-            JSONArray artistInfo = (JSONArray) jsonObject.get("Company List");
 
             System.out.println("ID: " + id);
             System.out.println("Name: " + name);
-            System.out.println("\nCompany List:");
-            Iterator<String> iterator = artistInfo.iterator();
-            while (iterator.hasNext()) {
-                System.out.println(iterator.next());
-            }
+            Assert.assertTrue(name.equals("Pink Floyd"));
  
         } catch (Exception e) {
             e.printStackTrace();
