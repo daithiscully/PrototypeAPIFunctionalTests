@@ -55,14 +55,14 @@ public class GetUserNameAndEmailTest {
         try {
         	StringBuilder result = new StringBuilder();
     		URL url = new URL("http://localhost:3000/api/useremail/" + username);
-    		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-    		conn.setRequestMethod("GET");
-    		BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+    		HttpURLConnection conn2 = (HttpURLConnection) url.openConnection();
+    		conn2.setRequestMethod("GET");
+    		BufferedReader rd2 = new BufferedReader(new InputStreamReader(conn2.getInputStream()));
     		String line;
-    		while ((line = rd.readLine()) != null) {
+    		while ((line = rd2.readLine()) != null) {
     			result.append(line);
     		}
-    		rd.close();
+    		rd2.close();
             Object obj = parser.parse(result.toString());
  
             JSONObject jsonObject = (JSONObject) obj;
