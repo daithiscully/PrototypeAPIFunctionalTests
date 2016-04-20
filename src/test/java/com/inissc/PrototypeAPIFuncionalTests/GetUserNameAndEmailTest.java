@@ -48,7 +48,7 @@ public class GetUserNameAndEmailTest {
         }
 	}
 	
-	@Test(dependsOnMethods="excuteGetName")
+	@Test(dependsOnMethods={ "excuteGetName" })
 	public void excuteGetEmailFromName() throws IOException {
 		JSONParser parser = new JSONParser();
 		 
