@@ -76,8 +76,8 @@ public class GetUserNameAndEmailTest {
             String email = (String) jsonObject.get("email");
 
             System.out.println("email: " + email);
-            //Assert.assertTrue(email.equals("PinkFloyd@gmail.com"));
-            Assert.assertTrue(email.equals("NoEmailGiven@gmail.com"));
+            Assert.assertTrue(email.equals("PinkFloyd@gmail.com"));
+            //Assert.assertTrue(email.equals("NoEmailGiven@gmail.com"));
  
             conn.disconnect();
         } catch (Exception e) {
